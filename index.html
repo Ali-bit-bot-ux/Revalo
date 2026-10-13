@@ -479,6 +479,141 @@ footer { margin-top: 80px; border-top: 1px solid var(--color-hairline); }
 .drawer-foot .btn { text-align: center; }
 .drawer-foot .note { font-size: 12px; color: var(--color-text-50); text-align: center; }
 
+
+/* ask-form section */
+.ask-section {
+  background: var(--color-beige-light, #f9f7f3);
+  padding: 80px 0;
+  border-top: 1px solid var(--color-hairline, #f7f7f7);
+}
+.ask-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: var(--radius-banner, 24px);
+  padding: 44px 40px;
+  border: 1px solid var(--color-border, rgba(8, 8, 8, 0.08));
+  box-shadow: 0 4px 24px rgba(8, 8, 8, 0.03);
+}
+.ask-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-beige, #ece4d9);
+  border-radius: var(--radius-card, 16px);
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+.ask-strip svg { flex-shrink: 0; }
+.asl { font-size: 12px; color: var(--color-text-50, rgba(8,8,8,0.5)); margin: 0; line-height: 1.3; }
+.asv { font-size: 14px; font-weight: 900; color: var(--color-text, #080808); margin: 0; }
+.ask-ey {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text-50, rgba(8,8,8,0.5));
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.ask-section h2 {
+  font-size: clamp(26px, 3.2vw, 32px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: var(--color-text, #080808);
+}
+.ask-sub {
+  font-size: 14px;
+  color: var(--color-text-50, rgba(8,8,8,0.5));
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.ask-fields { display: flex; flex-direction: column; gap: 18px; margin-bottom: 24px; }
+.ask-f { display: flex; flex-direction: column; gap: 6px; }
+.ask-f label { font-size: 12px; font-weight: 900; color: var(--color-text-80, rgba(8,8,8,0.8)); }
+.ask-f input, .ask-f textarea {
+  width: 100%;
+  border: 1px solid var(--color-border, rgba(8,8,8,0.08));
+  border-radius: var(--radius, 8px);
+  background: #ffffff;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--color-text, #080808);
+  outline: none;
+  transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
+  -webkit-appearance: none;
+}
+.ask-f input:focus, .ask-f textarea:focus {
+  border-color: var(--color-text, #080808);
+  box-shadow: 0 0 0 3px rgba(8, 8, 8, 0.05);
+}
+.ask-f input::placeholder, .ask-f textarea::placeholder {
+  color: var(--color-text-50, rgba(8,8,8,0.5));
+}
+.ask-f textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+.ask-hint { font-size: 12px; color: var(--color-text-50, rgba(8,8,8,0.5)); text-align: right; margin-top: 2px; }
+.ask-em { font-size: 12px; color: var(--color-sale, #d20000); display: none; margin-top: 2px; }
+.ask-f.error input, .ask-f.error textarea { border-color: var(--color-sale, #d20000); }
+.ask-f.error .ask-em { display: block; }
+.ask-dv { height: 1px; background: var(--color-hairline, #f7f7f7); margin: 24px 0; }
+.ask-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius, 8px);
+  font-size: 12px;
+  font-weight: 900;
+  padding: 16px 32px;
+  border: 1px solid transparent;
+  background: var(--color-text, #080808);
+  color: #ffffff;
+  transition: color 0.25s ease-out, background 0.25s ease-out, opacity 0.25s ease-out;
+  width: 100%;
+  font-family: inherit;
+  cursor: pointer;
+}
+.ask-btn:hover { background: var(--color-text-80, rgba(8,8,8,0.8)); }
+.ask-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.ask-btn svg { transition: transform 0.25s cubic-bezier(0.225, 0.64, 0.365, 1); flex-shrink: 0; }
+.ask-btn:not(:disabled):hover svg { transform: translateX(3px); }
+.ask-ok { display: none; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 24px 0; }
+.ask-ok.on { display: flex; }
+.ask-body.hidden { display: none; }
+.ask-ok-ic {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-text, #080808);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ask-ok-t { font-size: 24px; font-weight: 900; letter-spacing: -0.5px; margin: 0; color: var(--color-text, #080808); }
+.ask-ok-s { font-size: 14px; color: var(--color-text-50, rgba(8,8,8,0.5)); line-height: 1.5; max-width: 340px; margin: 0; }
+.ask-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #ffffff;
+  border-radius: var(--radius, 8px);
+  font-size: 12px;
+  font-weight: 900;
+  padding: 14px 28px;
+  transition: background 0.25s ease-out, opacity 0.25s ease-out;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.ask-wa:hover { background: #1ebe5d; }
+@media (max-width: 640px) {
+  .ask-section { padding: 60px 0; }
+  .ask-inner { padding: 28px 20px; border-radius: var(--radius-card, 16px); }
+}
+
 </style>
 </head>
 <body>
@@ -503,6 +638,10 @@ footer { margin-top: 80px; border-top: 1px solid var(--color-hairline); }
       <a class="drawer-link" href="#services" data-drawer-nav>
         <span>Ксерокопия и печать</span>
         <span class="tag">Услуга</span>
+      </a>
+      <a class="drawer-link" href="#ask" data-drawer-nav>
+        <span>Задать вопрос</span>
+        <span class="tag">WhatsApp</span>
       </a>
       <a class="drawer-link" href="https://2gis.kz/almaty/geo/70000001115555356" target="_blank" rel="noopener">
         <span>Магазин на карте 2GIS</span>
@@ -701,6 +840,62 @@ footer { margin-top: 80px; border-top: 1px solid var(--color-hairline); }
   </div>
 </section>
 
+
+<section class="ask-section" id="ask">
+  <div class="wrap">
+    <div class="ask-inner reveal">
+      <div class="ask-strip">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#25D366"/><path d="M17.5 14.9c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.1-.3.2-.4.1-.2 0-.3 0-.5C9.7 9.7 9 8 8.7 7.4c-.3-.6-.6-.5-.7-.5H7.5c-.2 0-.5.1-.8.4C6.5 7.6 5.8 8.3 5.8 9.8s1.1 2.9 1.2 3.1c.1.2 2.1 3.4 5.2 4.7 3.1 1.3 3.1.9 3.6.8.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4z" fill="#fff"/></svg>
+        <div>
+          <p class="asl">Вопросы отправляются на WhatsApp</p>
+          <p class="asv">+7 778 683 31 64</p>
+        </div>
+      </div>
+      <div class="ask-body" id="askBody">
+        <p class="ask-ey">Поддержка</p>
+        <h2>Задайте вопрос</h2>
+        <p class="ask-sub">Заполните форму и мы ответим вам через WhatsApp в течение дня.</p>
+        <form id="askForm" novalidate>
+          <div class="ask-fields">
+            <div class="ask-f" id="askFn">
+              <label for="askN">Ваше имя</label>
+              <input type="text" id="askN" placeholder="Например, Алия" autocomplete="name" maxlength="60">
+              <span class="ask-em">Пожалуйста, укажите ваше имя</span>
+            </div>
+            <div class="ask-f" id="askFp">
+              <label for="askP">Номер телефона</label>
+              <input type="tel" id="askP" placeholder="+7 (___) ___-__-__" autocomplete="tel" maxlength="20">
+              <span class="ask-em">Введите корректный номер телефона</span>
+            </div>
+            <div class="ask-f" id="askFq">
+              <label for="askQ">Ваш вопрос</label>
+              <textarea id="askQ" placeholder="Опишите ваш вопрос подробнее..." rows="4" maxlength="600"></textarea>
+              <div class="ask-hint" id="askCc">0 / 600</div>
+              <span class="ask-em">Пожалуйста, напишите ваш вопрос</span>
+            </div>
+          </div>
+          <div class="ask-dv"></div>
+          <button type="submit" class="ask-btn" id="askBtn">
+            <span>Отправить вопрос</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+      <div class="ask-ok" id="askOk">
+        <div class="ask-ok-ic">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p class="ask-ok-t">Вопрос отправлен!</p>
+        <p class="ask-ok-s">Мы получили ваш вопрос и ответим вам в WhatsApp в течение дня.</p>
+        <a href="https://wa.me/77786833164" target="_blank" rel="noopener" class="ask-wa" id="askWaLink">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.8 0-3.5-.5-5-1.4l-.3-.2-3.2 1 1-3.1-.2-.3C3.5 15.4 3 13.7 3 12 3 7.1 7.1 3 12 3s9 4.1 9 9-4.1 9-9 9z"/></svg>
+          <span>Открыть диалог в WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap subscribe">
     <div>
@@ -735,7 +930,8 @@ footer { margin-top: 80px; border-top: 1px solid var(--color-hairline); }
     <div>
       <h4>Контакты</h4>
       <a href="https://l.kaspi.kz/shop/EtfCocAVNHybrVR" target="_blank" rel="noopener">Страница продавца</a>
-      <a href="https://l.kaspi.kz/shop/EtfCocAVNHybrVR" target="_blank" rel="noopener">Задать вопрос</a>
+      <a href="#ask">Задать вопрос</a>
+      <a href="https://wa.me/77786833164" target="_blank" rel="noopener">WhatsApp: +7 778 683 31 64</a>
     </div>
   </div>
   <div class="wrap bottom">
@@ -1045,6 +1241,83 @@ document.querySelectorAll('[data-drawer-nav]').forEach((link) => {
   });
 });
 
+
+(function () {
+  var PHONE = '77786833164';
+  var elN = document.getElementById('askN');
+  var elP = document.getElementById('askP');
+  var elQ = document.getElementById('askQ');
+  var elCc = document.getElementById('askCc');
+  var form = document.getElementById('askForm');
+  var btn = document.getElementById('askBtn');
+  var body = document.getElementById('askBody');
+  var okBox = document.getElementById('askOk');
+  var waLink = document.getElementById('askWaLink');
+
+  if (!form || !elP || !elQ) return;
+
+  elP.addEventListener('input', function () {
+    var digits = this.value.replace(/\D/g, '');
+    if (digits.charAt(0) === '8') digits = '7' + digits.slice(1);
+    if (digits.length > 0) {
+      if (digits.charAt(0) !== '7') digits = '7' + digits;
+      var formatted = '+7';
+      if (digits.length > 1) formatted += ' (' + digits.slice(1, 4);
+      if (digits.length >= 4) formatted += ') ' + digits.slice(4, 7);
+      if (digits.length >= 7) formatted += '-' + digits.slice(7, 9);
+      if (digits.length >= 9) formatted += '-' + digits.slice(9, 11);
+      this.value = formatted;
+    } else {
+      this.value = '';
+    }
+  });
+
+  elQ.addEventListener('input', function () {
+    if (elCc) elCc.textContent = elQ.value.length + ' / 600';
+  });
+
+  function setErr(id, isErr) {
+    var field = document.getElementById(id);
+    if (field) field.classList.toggle('error', !!isErr);
+  }
+
+  if (elN) elN.addEventListener('input', function () { setErr('askFn', false); });
+  elP.addEventListener('input', function () { setErr('askFp', false); });
+  elQ.addEventListener('input', function () { setErr('askFq', false); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = (elN ? elN.value : '').trim();
+    var phone = elP.value.trim();
+    var question = elQ.value.trim();
+    var digits = phone.replace(/\D/g, '');
+
+    var valid = true;
+    if (!name) { setErr('askFn', true); valid = false; }
+    if (digits.length < 11) { setErr('askFp', true); valid = false; }
+    if (!question) { setErr('askFq', true); valid = false; }
+    if (!valid) return;
+
+    btn.disabled = true;
+    btn.innerHTML = '<span>Отправляем...</span>';
+
+    var text = 'Здравствуйте! Меня зовут ' + name + '.\n' +
+      'Мой номер: ' + phone + '\n\n' +
+      'Вопрос:\n' + question;
+
+    var waUrl = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text);
+    if (waLink) waLink.href = waUrl;
+
+    window.open(waUrl, '_blank');
+
+    setTimeout(function () {
+      if (body) body.classList.add('hidden');
+      if (okBox) okBox.classList.add('on');
+    }, 350);
+  });
+})();
+
 </script>
+
 </body>
 </html>
